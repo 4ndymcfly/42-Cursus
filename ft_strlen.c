@@ -1,21 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andloren <andloren@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/12 11:21:29 by andloren          #+#    #+#             */
-/*   Updated: 2024/09/13 13:39:58 by andloren         ###   ########.fr       */
+/*   Created: 2024/09/13 13:19:21 by andloren          #+#    #+#             */
+/*   Updated: 2024/09/13 13:34:55 by andloren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-# include <stdio.h>
-# include <stddef.h>
+size_t	ft_strlen(const char *s)
+{
+	size_t	i;
 
-#endif
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	return (i);
+}
+
+/* int	main(void)
+{
+	const char	*str = "Hello, world!";
+	size_t		len;
+
+	len = ft_strlen(str);
+	printf("Length of string: %zu\n", len);
+	return (0);
+} */
