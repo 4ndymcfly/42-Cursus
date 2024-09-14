@@ -1,29 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andloren <andloren@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/13 20:16:27 by andloren          #+#    #+#             */
-/*   Updated: 2024/09/13 20:16:33 by andloren         ###   ########.fr       */
+/*   Created: 2024/09/13 19:42:49 by andloren          #+#    #+#             */
+/*   Updated: 2024/09/13 19:43:01 by andloren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-		return (1);
-	return (0);
+	size_t	i;
+
+	i = 0;
+	if (size == 0)
+		return (ft_strlen(src));
+	while (src[i] != '\0' && i < size - 1)
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	dst[i] = '\0';
+	return (ft_strlen(src));
 }
 
 /* int	main(void)
 {
-	char	c;
+	char	*src;
+	char	dst[10];
+	size_t	n;
 
-	c = 'a';
-	printf("%d\n", ft_isalpha(c));
+	src = "Carabola";
+	n = 5;
+	printf("%lu\n", ft_strlcpy(dst, src, n));
 	return (0);
 } */

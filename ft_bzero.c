@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andloren <andloren@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/13 20:16:27 by andloren          #+#    #+#             */
-/*   Updated: 2024/09/13 20:16:33 by andloren         ###   ########.fr       */
+/*   Created: 2024/09/13 19:37:07 by andloren          #+#    #+#             */
+/*   Updated: 2024/09/13 19:38:19 by andloren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+void	ft_bzero(void *s, size_t n)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-		return (1);
-	return (0);
+	ft_memset(s, 0, n);
 }
 
 /* int	main(void)
 {
-	char	c;
+	char	*s;
+	size_t	n;
 
-	c = 'a';
-	printf("%d\n", ft_isalpha(c));
+	s = "Carabola";
+	n = 5;
+	ft_bzero(s, n);
+	printf("%s\n", s);
 	return (0);
 } */

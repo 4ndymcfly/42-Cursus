@@ -1,29 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andloren <andloren@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/13 20:16:27 by andloren          #+#    #+#             */
-/*   Updated: 2024/09/13 20:16:33 by andloren         ###   ########.fr       */
+/*   Created: 2024/09/13 20:02:08 by andloren          #+#    #+#             */
+/*   Updated: 2024/09/13 20:02:36 by andloren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+void	*ft_calloc(size_t count, size_t size)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-		return (1);
-	return (0);
+	void	*ptr;
+
+	ptr = malloc(count * size);
+	if (!ptr)
+		return (NULL);
+	ft_bzero(ptr, count * size);
+	return (ptr);
 }
 
 /* int	main(void)
 {
-	char	c;
+	size_t	count;
+	size_t	size;
+	void	*ptr;
 
-	c = 'a';
-	printf("%d\n", ft_isalpha(c));
+	count = 5;
+	size = 2;
+	ptr = ft_calloc(count, size);
+	printf("%s\n", ptr);
 	return (0);
 } */

@@ -1,44 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andloren <andloren@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/13 20:17:22 by andloren          #+#    #+#             */
-/*   Updated: 2024/09/13 20:17:26 by andloren         ###   ########.fr       */
+/*   Created: 2024/09/13 19:58:21 by andloren          #+#    #+#             */
+/*   Updated: 2024/09/13 20:01:40 by andloren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+int	ft_atoi(const char *str)
 {
-	size_t	i;
+	int	i;
+	int	sign;
+	int	n;
 
 	i = 0;
-	while (s[i] != '\0')
+	sign = 1;
+	n = 0;
+	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' || str[i] == '\v'
+		|| str[i] == '\f' || str[i] == '\r')
+		i++;
+	if (str[i] == '-' || str[i] == '+')
 	{
-		if (s[i] == (char)c)
-		{
-			return ((char *)(s + i));
-		}
+		if (str[i] == '-')
+			sign = -1;
 		i++;
 	}
-	if (c == '\0')
+	while (ft_isdigit(str[i]))
 	{
-		return ((char *)(s + i));
+		n = n * 10 + str[i] - '0';
+		i++;
 	}
-	return (NULL);
+	return (n * sign);
 }
 
-/* int	main(void)
+/* int main(void)
 {
-	char	*s;
-	char	c;
-
-	s = "Carabola";
-	c = 'b';
-	printf("%s\n", ft_strchr(s, c));
+	char *str = "42";
+	int result = ft_atoi(str);
+	printf("The result is: %d\n", result);
 	return (0);
 } */

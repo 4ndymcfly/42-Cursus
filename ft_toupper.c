@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: andloren <andloren@student.42.fr>          +#+  +:+       +#+        */
+/*   By: andloren <andloren@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/12 13:33:41 by andloren          #+#    #+#             */
-/*   Updated: 2024/09/12 20:02:08 by andloren         ###   ########.fr       */
+/*   Created: 2024/09/13 20:18:18 by andloren          #+#    #+#             */
+/*   Updated: 2024/09/13 20:18:22 by andloren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

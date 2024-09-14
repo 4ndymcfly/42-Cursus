@@ -1,44 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andloren <andloren@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/13 20:17:22 by andloren          #+#    #+#             */
-/*   Updated: 2024/09/13 20:17:26 by andloren         ###   ########.fr       */
+/*   Created: 2024/09/13 19:54:53 by andloren          #+#    #+#             */
+/*   Updated: 2024/09/13 19:57:35 by andloren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
+	size_t	j;
 
 	i = 0;
-	while (s[i] != '\0')
+	if (little[0] == '\0')
+		return ((char *)big);
+	while (big[i] != '\0' && i < len)
 	{
-		if (s[i] == (char)c)
-		{
-			return ((char *)(s + i));
-		}
+		j = 0;
+		while (little[j] != '\0' && big[i + j] == little[j] && i + j < len)
+			j++;
+		if (little[j] == '\0')
+			return ((char *)&big[i]);
 		i++;
-	}
-	if (c == '\0')
-	{
-		return ((char *)(s + i));
 	}
 	return (NULL);
 }
 
 /* int	main(void)
 {
-	char	*s;
-	char	c;
+	char	*big;
+	char	*little;
+	size_t	len;
 
-	s = "Carabola";
-	c = 'b';
-	printf("%s\n", ft_strchr(s, c));
+	big = "Carabola";
+	little = "rab";
+	len = 5;
+	printf("%s\n", ft_strnstr(big, little, len));
 	return (0);
 } */

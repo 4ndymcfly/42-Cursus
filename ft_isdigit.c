@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: andloren <andloren@student.42.fr>          +#+  +:+       +#+        */
+/*   By: andloren <andloren@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/12 13:36:59 by andloren          #+#    #+#             */
-/*   Updated: 2024/09/12 13:37:20 by andloren         ###   ########.fr       */
+/*   Created: 2024/09/13 20:16:54 by andloren          #+#    #+#             */
+/*   Updated: 2024/09/13 20:16:59 by andloren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: andloren <andloren@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/13 11:52:08 by andloren          #+#    #+#             */
-/*   Updated: 2024/09/13 13:17:49 by andloren         ###   ########.fr       */
+/*   Created: 2024/09/13 19:45:28 by andloren          #+#    #+#             */
+/*   Updated: 2024/09/13 19:45:44 by andloren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,9 @@ int	ft_isprint(int c)
 
 /* int	main(void)
 {
-	int	c;
+	char	c;
 
-	c = 'A';
-	if (ft_isprint(c))
-		printf("%c is a printable character\n", c);
-	else
-		printf("%c is not a printable character\n", c);
+	c = 'a';
+	printf("%d\n", ft_isprint(c));
 	return (0);
 } */

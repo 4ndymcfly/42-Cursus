@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: andloren <andloren@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/13 13:19:21 by andloren          #+#    #+#             */
-/*   Updated: 2024/09/14 19:20:19 by andloren         ###   ########.fr       */
+/*   Created: 2024/09/13 19:46:03 by andloren          #+#    #+#             */
+/*   Updated: 2024/09/13 19:46:15 by andloren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,9 @@ size_t	ft_strlen(const char *s)
 
 /* int	main(void)
 {
-	const char	*str = "Hola, carabola!";
-	size_t		len;
+	char	*s;
 
-	len = ft_strlen(str);
-	printf("Length of string: %zu\n", len);
+	s = "Carabola";
+	printf("%lu\n", ft_strlen(s));
 	return (0);
 } */

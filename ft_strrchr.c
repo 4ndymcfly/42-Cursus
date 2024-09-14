@@ -1,29 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andloren <andloren@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/13 20:16:27 by andloren          #+#    #+#             */
-/*   Updated: 2024/09/13 20:16:33 by andloren         ###   ########.fr       */
+/*   Created: 2024/09/13 19:50:51 by andloren          #+#    #+#             */
+/*   Updated: 2024/09/13 19:51:06 by andloren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-		return (1);
-	return (0);
+	int	i;
+
+	i = ft_strlen(s);
+	while (i >= 0)
+	{
+		if (s[i] == c)
+			return ((char *)&s[i]);
+		i--;
+	}
+	return (NULL);
 }
 
 /* int	main(void)
 {
-	char	c;
+	char	*s;
+	int		c;
 
+	s = "Carabola";
 	c = 'a';
-	printf("%d\n", ft_isalpha(c));
+	printf("%s\n", ft_strrchr(s, c));
 	return (0);
 } */

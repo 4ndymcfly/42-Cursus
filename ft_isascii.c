@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: andloren <andloren@student.42.fr>          +#+  +:+       +#+        */
+/*   By: andloren <andloren@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/12 14:02:21 by andloren          #+#    #+#             */
-/*   Updated: 2024/09/12 14:02:34 by andloren         ###   ########.fr       */
+/*   Created: 2024/09/13 20:16:43 by andloren          #+#    #+#             */
+/*   Updated: 2024/09/13 20:16:47 by andloren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

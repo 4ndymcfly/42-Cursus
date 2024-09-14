@@ -1,29 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andloren <andloren@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/13 20:16:27 by andloren          #+#    #+#             */
-/*   Updated: 2024/09/13 20:16:33 by andloren         ###   ########.fr       */
+/*   Created: 2024/09/13 19:43:54 by andloren          #+#    #+#             */
+/*   Updated: 2024/09/13 19:44:10 by andloren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-		return (1);
-	return (0);
+	size_t	i;
+	size_t	j;
+
+	i = 0;
+	while (dst[i] != '\0' && i < size)
+		i++;
+	j = i;
+	while (src[i - j] != '\0' && i + 1 < size)
+	{
+		dst[i] = src[i - j];
+		i++;
+	}
+	if (j < size)
+		dst[i] = '\0';
+	return (j + ft_strlen(src));
 }
 
 /* int	main(void)
 {
-	char	c;
+	char	*src;
+	char	dst[10];
+	size_t	n;
 
-	c = 'a';
-	printf("%d\n", ft_isalpha(c));
+	src = "Carabola";
+	n = 5;
+	printf("%lu\n", ft_strlcat(dst, src, n));
 	return (0);
 } */
