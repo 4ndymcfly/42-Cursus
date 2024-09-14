@@ -6,7 +6,7 @@
 /*   By: andloren <andloren@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 13:19:21 by andloren          #+#    #+#             */
-/*   Updated: 2024/09/13 13:34:55 by andloren         ###   ########.fr       */
+/*   Updated: 2024/09/14 19:20:19 by andloren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ size_t	ft_strlen(const char *s)
 
 /* int	main(void)
 {
-	const char	*str = "Hello, world!";
+	const char	*str = "Hola, carabola!";
 	size_t		len;
 
 	len = ft_strlen(str);
