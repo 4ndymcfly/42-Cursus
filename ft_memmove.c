@@ -6,7 +6,7 @@
 /*   By: andloren <andloren@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 19:41:12 by andloren          #+#    #+#             */
-/*   Updated: 2024/09/16 12:56:38 by andloren         ###   ########.fr       */
+/*   Updated: 2024/09/17 15:06:37 by andloren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	src = "Carabola";
 	dst = malloc(10);
-	n = 5;
-	printf("%s\n", ft_memmove(dst, src, n));
+	n = 4;
+	printf("%s\n\n\n", (char*)ft_memmove(dst, src, n));
 	return (0);
 } */

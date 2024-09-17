@@ -6,7 +6,7 @@
 /*   By: andloren <andloren@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 19:46:39 by andloren          #+#    #+#             */
-/*   Updated: 2024/09/16 11:58:55 by andloren         ###   ########.fr       */
+/*   Updated: 2024/09/17 15:24:34 by andloren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ void	*ft_memset(void *b, int c, size_t len)
 {
 	size_t	i;
 
-	if (b == NULL)
-		return NULL; // or handle the error in an appropriate way
 	i = 0;
 	while (i < len)
 	{

@@ -6,7 +6,7 @@
 /*   By: andloren <andloren@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 19:50:51 by andloren          #+#    #+#             */
-/*   Updated: 2024/09/13 19:51:06 by andloren         ###   ########.fr       */
+/*   Updated: 2024/09/17 15:37:41 by andloren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,20 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	i;
+	char			*last_occurrence;
+	unsigned char	uc;
 
-	i = ft_strlen(s);
-	while (i >= 0)
+	last_occurrence = NULL;
+	uc = (unsigned char)c;
+	while (*s)
 	{
-		if (s[i] == c)
-			return ((char *)&s[i]);
-		i--;
+		if (*s == uc)
+			last_occurrence = (char *)s;
+		s++;
 	}
-	return (NULL);
+	if (uc == '\0')
+		return ((char *)s);
+	return (last_occurrence);
 }
 
 /* int	main(void)
