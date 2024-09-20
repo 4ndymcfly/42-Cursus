@@ -3,5 +3,4 @@
 </h1>
 
 # 42 COMMON CORE
-My Cursus projects backup
-42 Málaga
+My Cursus projects backup in 42 Málaga.
