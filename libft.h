@@ -6,18 +6,18 @@
 /*   By: andloren <andloren@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 11:21:29 by andloren          #+#    #+#             */
-/*   Updated: 2024/09/19 11:36:45 by andloren         ###   ########.fr       */
+/*   Updated: 2024/09/20 10:33:58 by andloren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <stddef.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
-# include <stddef.h>
 
 // Define the t_list structure
 typedef struct s_list
@@ -100,5 +100,10 @@ void				*ft_calloc(size_t nmemb, size_t size);
 /* Duplicates the string s1 by allocating sufficient memory for a copy of s1,
 does the copy, and returns a pointer to it.*/
 char				*ft_strdup(const char *s1);
+
+/*The substr( ) function returns characters from the string value starting at
+the character position specified by start.
+The number of characters returned is specified by length.*/
+char				*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif
