@@ -7,7 +7,6 @@ OBJS = $(SRCS:.c=.o)
 # Regla para compilar los archivos objeto
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
-	
 
 # Regla para compilar la librería libft
 $(NAME): $(OBJS)
