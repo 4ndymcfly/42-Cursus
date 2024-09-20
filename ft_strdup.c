@@ -6,7 +6,7 @@
 /*   By: andloren <andloren@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 20:03:00 by andloren          #+#    #+#             */
-/*   Updated: 2024/09/13 20:03:22 by andloren         ###   ########.fr       */
+/*   Updated: 2024/09/20 12:10:08 by andloren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,10 @@ char	*ft_strdup(const char *s1)
 	size_t	len;
 
 	len = ft_strlen(s1);
-	ptr = malloc(len + 1);
+	ptr = ft_calloc(len + 1, sizeof(char));
 	if (!ptr)
 		return (NULL);
-	ft_memcpy(ptr, s1, len);
-	ptr[len] = '\0';
-	return (ptr);
+	return (ft_memcpy(ptr, s1, len));
 }
 
 /* int	main(void)
