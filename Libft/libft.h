@@ -6,7 +6,7 @@
 /*   By: andloren <andloren@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 11:21:29 by andloren          #+#    #+#             */
-/*   Updated: 2024/09/20 10:33:58 by andloren         ###   ########.fr       */
+/*   Updated: 2024/09/26 10:00:14 by andloren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,5 +105,19 @@ char				*ft_strdup(const char *s1);
 the character position specified by start.
 The number of characters returned is specified by length.*/
 char				*ft_substr(char const *s, unsigned int start, size_t len);
+
+// The function ft_strjoin concat two strings (s1 & s2) into a new string (s3).
+// It first checks if either s1 or s2 is NULL, returning NULL if so.
+// It calculates the total length needed for the new string,
+// including the null terminator.
+// Memory is allocated for the new string, and if allocation fails,
+// NULL is returned.
+// The function then copies s1 into the new string and appends s2 to it.
+// Finally, the concatenated string is returned.
+char				*ft_strjoin(char const *s1, char const *s2);
+
+char				*ft_strtrim(char const *s1, char const *set);
+
+char				**ft_split(char const *s, char c);
 
 #endif
