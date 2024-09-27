@@ -6,7 +6,7 @@
 /*   By: andloren <andloren@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 12:25:12 by andloren          #+#    #+#             */
-/*   Updated: 2024/09/25 11:12:36 by andloren         ###   ########.fr       */
+/*   Updated: 2024/09/27 10:03:43 by andloren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ char	*ft_strtrim(const char *s1, const char *set)
 	return (ft_maketrim(s1, trim, s_pos, e_pos));
 }
 
-/* int	main(void)
+int	main(void)
 {
 	char	s1[] = "   Hello, 42 Students!   ";
 	char	set[] = " ";
@@ -115,4 +115,4 @@ char	*ft_strtrim(const char *s1, const char *set)
 		printf("Memory allocation failed\n");
 	}
 	return (0);
-} */
+}

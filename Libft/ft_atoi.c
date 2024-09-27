@@ -6,7 +6,7 @@
 /*   By: andloren <andloren@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 19:58:21 by andloren          #+#    #+#             */
-/*   Updated: 2024/09/25 12:46:14 by andloren         ###   ########.fr       */
+/*   Updated: 2024/09/27 10:36:11 by andloren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	ft_atoi(const char *str)
 	return (n * sign);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	char	*str;
 	int		result;
@@ -47,4 +47,4 @@ int	main(void)
 	result = ft_atoi(str);
 	printf("The result is: %d\n", result);
 	return (0);
-}
+} */
