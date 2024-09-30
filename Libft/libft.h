@@ -6,7 +6,7 @@
 /*   By: andloren <andloren@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 11:21:29 by andloren          #+#    #+#             */
-/*   Updated: 2024/09/30 12:27:35 by andloren         ###   ########.fr       */
+/*   Updated: 2024/09/30 12:32:52 by andloren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -150,6 +150,7 @@ void				ft_lstclear(t_list **lst, void (*del)(void *));
 
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 
-t_list				*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
+						void (*del)(void *));
 
 #endif
