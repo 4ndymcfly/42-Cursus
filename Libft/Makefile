@@ -3,44 +3,28 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 SRCS = $(wildcard *.c)
 OBJS = $(SRCS:.c=.o)
+BONUS_SRCS = $(wildcard *_bonus.c)
+BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 
-# Regla para compilar los archivos objeto
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-# Regla para compilar la librería libft
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 	@echo "\033[32m\nLibft Compiled!\033[0m"
 
-# Regla para compilar todos los archivos
-all: $(NAME)
+all: $(NAME) bonus
 
-# Regla para limpiar archivos objeto
+bonus: $(OBJS) $(BONUS_OBJS)
+	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+	@echo "\033[32m\nLibft Bonus Compiled!\033[0m"
+
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(BONUS_OBJS)
 
-# Regla para limpiar archivos objeto y ejecutables
 fclean: clean
 	rm -f $(NAME)
 
-# Regla para recompilar todo
 re: fclean all
 
-# Regla para compilar los bonus
-BONUS_SRCS = $(wildcard *_bonus.c)
-BONUS_OBJS = $(BONUS_SRCS:.c=.o)
-BONUS_NAME = $(NAME)_bonus
-
-bonus: $(BONUS_OBJS)
-	ar rcs $(BONUS_NAME) $(BONUS_OBJS)
-
-# Regla para limpiar archivos objeto y ejecutables de los bonus
-clean_bonus:
-	rm -f $(BONUS_OBJS) $(BONUS_NAME)
-
-# Regla para agregar al comando fclean
-fclean: clean clean_bonus
-
-# Especifica palabras clave que no son archivos.
-.PHONY: all clean fclean re bonus clean_bonus
+.PHONY: all clean fclean re bonus
