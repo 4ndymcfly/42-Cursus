@@ -11,7 +11,7 @@ OBJS = $(SRCS:.c=.o)
 # Regla para compilar la librería libft
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
-	@echo "\033[32m\nLibft Compiled! ᕦ(\033[31m♥\033[32m_\033[31m♥\033[32m)ᕤ\n"
+	@echo "\033[32m\nLibft Compiled!\033[0m"
 
 # Regla para compilar todos los archivos
 all: $(NAME)
