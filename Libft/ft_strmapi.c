@@ -6,7 +6,7 @@
 /*   By: andloren <andloren@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 11:34:43 by andloren          #+#    #+#             */
-/*   Updated: 2024/10/01 11:11:08 by andloren         ###   ########.fr       */
+/*   Updated: 2024/10/01 12:04:22 by andloren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	(void)i;
 	return ((char)ft_toupper((int)c));
-	// Cast para asegurar que el char se maneja como int
+	// Cast to ensure that the char is handled as an int
 }
 
 int	main(void)
@@ -44,7 +44,7 @@ int	main(void)
 	char	*s;
 	char	*result;
 
-	s = "Hello, World!";
+	s = "Hello, 42 students!";
 	result = ft_strmapi(s, ft_toupper_mapi);
 	if (result)
 	{
