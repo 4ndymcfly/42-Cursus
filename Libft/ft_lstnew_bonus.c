@@ -6,7 +6,7 @@
 /*   By: andloren <andloren@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 12:26:50 by andloren          #+#    #+#             */
-/*   Updated: 2024/10/01 13:11:03 by andloren         ###   ########.fr       */
+/*   Updated: 2024/10/01 13:13:06 by andloren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ t_list	*ft_lstnew(void *content)
 
 	content = "Hello, 42 students!";
 	node = ft_lstnew(content);
-	printf("Contenido del nodo: %s\n", (char *)node->content);
-	printf("Dirección del nodo: %p\n", (void *)node);
-	printf("Dirección del siguiente nodo: %p\n\n\n", (void *)node->next);
+	printf("Node content: %s\n", (char *)node->content);
+	printf("Node address: %p\n", (void *)node);
+	printf("Next node address: %p\n", (void *)node->next);
 	free(node);
 	return (0);
 } */
