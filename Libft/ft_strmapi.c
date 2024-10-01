@@ -6,7 +6,7 @@
 /*   By: andloren <andloren@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 11:34:43 by andloren          #+#    #+#             */
-/*   Updated: 2024/09/30 15:34:15 by andloren         ###   ########.fr       */
+/*   Updated: 2024/10/01 11:11:08 by andloren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,30 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
+
+/* char	ft_toupper_mapi(unsigned int i, char c)
+{
+	(void)i;
+	return ((char)ft_toupper((int)c));
+	// Cast para asegurar que el char se maneja como int
+}
+
+int	main(void)
+{
+	char	*s;
+	char	*result;
+
+	s = "Hello, World!";
+	result = ft_strmapi(s, ft_toupper_mapi);
+	if (result)
+	{
+		printf("Original string: %s\n", s);
+		printf("Modified string: %s\n\n\n", result);
+		free(result);
+	}
+	else
+	{
+		printf("Memory allocation failed\n");
+	}
+	return (0);
+} */
