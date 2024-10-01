@@ -6,7 +6,7 @@
 /*   By: andloren <andloren@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 12:04:13 by andloren          #+#    #+#             */
-/*   Updated: 2024/10/01 11:36:20 by andloren         ###   ########.fr       */
+/*   Updated: 2024/10/01 12:06:38 by andloren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,15 +28,15 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	if (*c >= 'a' && *c <= 'z')
 		*c = *c - 32;
-	printf("Posición: %u, Carácter modificado: %c\n", i, *c);
+	printf("Position: %u, Modified character: %c\n", i, *c);
 }
 
 int	main(void)
 {
 	char	str[] = "Hello, 42!";
 
-	printf("Cadena original: %s\n\n", str);
+	printf("Original string: %s\n\n", str);
 	ft_striteri(str, ft_iteri_toupper);
-	printf("\nCadena modificada: %s\n\n\n", str);
+	printf("\nModified string: %s\n\n\n", str);
 	return (0);
 } */
