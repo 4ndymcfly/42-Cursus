@@ -6,7 +6,7 @@
 /*   By: andloren <andloren@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 12:05:23 by andloren          #+#    #+#             */
-/*   Updated: 2024/09/30 12:05:26 by andloren         ###   ########.fr       */
+/*   Updated: 2024/10/01 12:02:16 by andloren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,3 +20,9 @@ void	ft_putstr_fd(char *s, int fd)
 	while (s[i])
 		write(fd, &s[i++], 1);
 }
+/* int	main(void)
+{
+	ft_putstr_fd("Hello, 42 students!", 1);
+	ft_putchar_fd('\n', 1);
+	return (0);
+} */
