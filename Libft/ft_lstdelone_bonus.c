@@ -6,7 +6,7 @@
 /*   By: andloren <andloren@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 12:29:58 by andloren          #+#    #+#             */
-/*   Updated: 2024/10/02 12:26:48 by andloren         ###   ########.fr       */
+/*   Updated: 2024/10/02 13:44:01 by andloren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,7 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	if (!lst || !del)
 		return ;
-	if (lst->content)
-		del(lst->content);
+	del(lst->content);
 	free(lst);
 }
 
