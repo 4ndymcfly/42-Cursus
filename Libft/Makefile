@@ -1,6 +1,7 @@
 NAME = libft.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
+BONUS = .bonus
 
 SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
        ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c \
@@ -18,27 +19,28 @@ BONUS_SRCS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
 
 BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
-
-$(NAME): $(OBJS)
-	ar rcs $(NAME) $?
-	@touch $(NAME)
-	@echo "\033[32m\nLibft Compiled!\033[0m"
-
 all: $(NAME)
 
-bonus: $(NAME) $(BONUS_OBJS)
-	ar rcs $(NAME) $(BONUS_OBJS)
-	@touch $@
-	@echo "\033[32m\nLibft with Bonus Compiled!\033[0m"
+%.o: %.c
+	@$(CC) $(CFLAGS) -c $< -o $@
+
+$(NAME): $(OBJS)
+	@ar rcs $(NAME) $?
+	@echo "\033[32m\n[+] Libft compiled!\033[0m"
+
+bonus: $(BONUS)
+
+$(BONUS): $(NAME) $(BONUS_OBJS)
+	@ar rcs $(NAME) $(BONUS_OBJS)
+	@touch .bonus
+	@echo "\033[32m\n[+] Libft with Bonus compiled!\033[0m"
 
 clean:
-	rm -f $(OBJS) $(BONUS_OBJS)
-	rm -f bonus
+	@rm -f $(OBJS) $(BONUS_OBJS)
+	@echo "\033[32m\n[!] Libft cleaned!\033[0m"
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME) $(BONUS)
 
 re: fclean all
 
